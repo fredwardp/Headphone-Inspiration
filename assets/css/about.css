@@ -1,0 +1,98 @@
+header {
+  margin-top: -25rem;
+  margin-inline: 4.87%;
+}
+.about_background {
+  margin-top: 7.8%;
+  min-height: 220svh;
+  background: url(../img/section-about-1.jpg) no-repeat center top -10%;
+  background-size: cover;
+}
+
+.about_h1 {
+  font-size: var(--fs-medium);
+  margin-left: 30%;
+  max-width: 20ch;
+}
+
+.alchemy_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 6.5%;
+  margin-inline: 15%;
+  margin-block: 8.6%;
+  position: relative;
+}
+
+.alchemy_article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alchemy_h2 {
+  font-size: var(--fs-medium);
+  text-transform: uppercase;
+  margin-bottom: 4.2%;
+}
+
+.alchemy_p {
+  margin-bottom: 4.5%;
+}
+
+.alchemy_article p {
+  max-width: 60rem;
+}
+
+/* Alchemy Image Animation */
+
+.alchemy_animation_wrapper {
+  position: relative;
+}
+
+.alchemy_animation_wapper img {
+  transform-style: preserve-3d;
+}
+
+.alchemy_animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+:root {
+  --alchemy_animation: rotate(10deg) rotateX(-30deg) rotateY(20deg) skew(-20deg)
+    translate(20%, 10%);
+}
+
+.alchemy_animation_wrapper:hover > .alchemy_img {
+  transform: var(--alchemy_animation) translate(-40%, -20%);
+}
+.alchemy_animation_wrapper:hover > .alchemy_layer_1 {
+  transform: var(--alchemy_animation) translate(-30%, -15%);
+}
+.alchemy_animation_wrapper:hover > .alchemy_layer_2 {
+  transform: var(--alchemy_animation) translate(-20%, -10%);
+}
+.alchemy_animation_wrapper:hover > .alchemy_layer_3 {
+  transform: var(--alchemy_animation) translate(-10%, -5%);
+  box-shadow: -80px 60px 15px 5px rgba(0, 0, 0, 0.4);
+}
+
+.alchemy_img {
+  position: relative;
+  z-index: 4;
+}
+
+.alchemy_layer_1 {
+  z-index: 3;
+  opacity: 0.6;
+}
+.alchemy_layer_2 {
+  z-index: 2;
+  opacity: 0.3;
+}
+.alchemy_layer_3 {
+  z-index: 3;
+  opacity: 0.1;
+}
